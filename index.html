@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniAppify - разработка Telegram Mini Apps</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <button id="scrollToTop" title="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header>
+        <nav>
+            <div class="logo">MINIAPPIFY</div>
+            <div class="nav-links">
+                <a href="#telegram-mini-app">Mini Apps</a>
+                <a href="#about">Наши преимущества</a>
+                <a href="#process">Этапы работы</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#contact">Обсудить проект</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>MiniAppify - разработка современных Telegram Mini Apps под ваши задачи</h1>
+            <p>Дизайн, разработка и выгрузка на сервер</p>
+            <a href="#contact" class="cta-button">Обсудить проект</a>
+        </section>
+
+        <section id="telegram-mini-app">
+            <h2>Что такое Telegram Mini App?</h2>
+            <p>Telegram Mini Apps — это легкие веб-приложения, которые работают внутри мессенджера Telegram. Они позволяют пользователям взаимодействовать с сервисами и получать информацию, не покидая приложение. Mini Apps могут быть использованы для различных целей, включая игры, онлайн-магазины, сервисы для общения и многое другое. Благодаря интеграции с Telegram, такие приложения обеспечивают быстрый доступ к функционалу и удобный интерфейс для пользователей.</p>
+        </section>
+
+        <section id="about">
+            <h2>Наши преимущества</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Благодаря небольшому количеству разработчиков и правильно настроенной коммуникации в команде, мы можем выполнять ваши заказы быстро и по доступной всем цене.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>до 3 дней</h3>
+                        <p>Выполнения заказа</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Довольных клиентов</p>
+                    </div>
+                    <div class="stat">
+                        <h3>24/7</h3>
+                        <p>Ответы на вопросы</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <h2>Этапы работы</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Обсуждение и оценка проекта</h3>
+                    <p>Анализ требований и целей проекта, </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Проектирование</h3>
+                    <p>Разработка прототипа и дизайна</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Разработка</h3>
+                    <p>Создание и тестирование продукта</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Запуск</h3>
+                    <p>Развертывание на сервере</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>Примеры работ</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <video controls autoplay muted>
+                        <source src="video/video1.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h3>Red Hat History</h3>
+                    <p>Игра - квест с возможностью выбора дальнейшего развития событий</p>
+                </div>
+                <div class="portfolio-item">
+                    <video controls autoplay muted>
+                        <source src="video/video2.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h3>Memory Game</h3>
+                    <p>Развлекательная игра на развитие памяти с любыми фото на карточках. На примере фото наш СЕО в молодости)</p>
+                </div>
+                <div class="portfolio-item">
+                    <video controls autoplay muted>
+                        <source src="video/video3.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <h3>Profession Test</h3>
+                    <p>Лаконичный тест на выбор будущей профессии.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Обсудить проект</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder="Ваше имя">
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" required placeholder="Телефон">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="description" name="description" required placeholder="Краткое описание проекта"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Отправить</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h2>Популярные вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Что такое Telegram Mini Apps?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Telegram Mini Apps — это сайт, адаптированные под мобильные устройства, открывающийся в WebView(окошко внутри мессенджера).</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Как заказать разработку Mini App?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Вы можете обсудить проект, заполнив форму на нашем сайте или связавшись с нами по электронной почте, номеру телефона или в Telegram.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Сколько времени занимает разработка?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Сроки зависят от сложности проекта, но весь процесс выполнения заказа не займет более 3 дней.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Нужно ли платить за домен и сервер?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Да, домен и сервер входят в стоимость заказа. Мы оплачиваем домен на год, а сервер на 1 месяц. Так же мы вам расскажем, как это в дальнейшем делать самостоятельно. </p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Сколько в среднем стоит один заказ?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>В среднем цена выполнения одного заказа составляет 10000 рублей</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <h3>Как мне узнать все актуальные новости по теме Mini Apps?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Советую подписаться на наш Telegram канал <a href="https://t.me/mini_app_lab24">MiniAppify</a>чтобы ничего не пропустить, и научиться самому разрабатывать простые Telegram Mini Apps </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>MiniAppify</h3>
+                <p>Разработка современных Telegram Mini Apps под ваши задачи</p>
+            </div>
+            <div class="footer-contact">
+                <p>Email: miniappify@mail.ru</p>
+                <p>Telegram: https://t.me/Klaus_Develop</p>
+                <p>Номер телефона: +7(906)034-28-66</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MiniAppify. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector("i");
+            
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+            
+            // Переключение класса для стрелочки
+            icon.classList.toggle("rotated");
+        }
+    </script>
+</body>
+</html>
