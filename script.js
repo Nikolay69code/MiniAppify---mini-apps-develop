@@ -2,28 +2,34 @@ document.addEventListener('DOMContentLoaded', function() {
     // Кнопка прокрутки наверх
     const scrollButton = document.getElementById('scrollToTop');
     
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollButton.style.display = "block";
-        } else {
-            scrollButton.style.display = "none";
-        }
-    };
+    // Проверяем наличие кнопки прокрутки перед добавлением обработчиков
+    if (scrollButton) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
 
-    scrollButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+        scrollButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
-    });
+    }
 
     // Мобильное меню
     const burgerMenu = document.querySelector('.burger-menu');
     const navLinks = document.querySelector('.nav-links');
 
-    burgerMenu.addEventListener('click', function() {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    });
+    // Проверяем наличие мобильного меню
+    if (burgerMenu && navLinks) {
+        burgerMenu.addEventListener('click', function() {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
 
     // Обработка формы
     const contactForm = document.getElementById('contactForm');
