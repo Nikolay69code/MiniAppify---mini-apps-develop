@@ -31,34 +31,56 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', async (event) => {
             event.preventDefault();
+            
+            // Добавляем проверку заполнения полей
+            const name = contactForm.querySelector('#name').value.trim();
+            const phone = contactForm.querySelector('#phone').value.trim();
+            const email = contactForm.querySelector('#email').value.trim();
+            const description = contactForm.querySelector('#description').value.trim();
+
+            // Проверяем заполнение всех полей
+            if (!name || !phone || !email || !description) {
+                alert('Пожалуйста, заполните все поля формы');
+                return;
+            }
 
             const formData = {
-                name: contactForm.querySelector('#name').value,
-                phone: contactForm.querySelector('#phone').value,
-                email: contactForm.querySelector('#email').value,
-                description: contactForm.querySelector('#description').value
+                name,
+                phone,
+                email,
+                description
             };
 
             try {
+                console.log('Отправка данных:', formData); // Добавляем логирование
+
                 const response = await fetch('/api/submit-form', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(formData)
                 });
 
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
                 const result = await response.json();
+                console.log('Ответ сервера:', result); // Добавляем логирование
+                
                 alert(result.message);
                 
                 if (response.ok) {
-                    // Очищаем форму после успешной отправки
                     contactForm.reset();
                 }
             } catch (error) {
                 console.error('Ошибка при отправке формы:', error);
-                alert('Произошла ошибка при отправке формы');
+                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.');
             }
         });
+    } else {
+        console.error('Форма не найдена на странице');
     }
 }); 
